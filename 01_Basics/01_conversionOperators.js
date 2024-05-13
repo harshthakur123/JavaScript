@@ -42,3 +42,4 @@
 let num1=33
 let str1=String(num1)
 console.log(typeof str1)
+
