@@ -8,7 +8,7 @@
 
 //----------------------------------------------------------
 
-//for - of
+//for - of - Loop ----> It extracts values by default
 
 // const greetings="Hello Harsh"
 
