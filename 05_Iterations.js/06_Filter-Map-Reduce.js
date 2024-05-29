@@ -67,7 +67,7 @@ const books = [
 // we have to use 'return' keyword when we decalre block
 
 
-const userBooks=books.filter( (bk)=> {
-    return  bk.year>1925 && bk.genre==="Fiction"
-})
-console.log(userBooks);
+// const userBooks=books.filter( (bk)=> {
+//     return  bk.year>1925 && bk.genre==="Fiction"
+// })
+// console.log(userBooks);
