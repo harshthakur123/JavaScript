@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <ul id="images">
+        <li>
+            <img width="200px" src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" id="river">
+        </li>
+        <li>
+            <img width="200px" src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="tree" alt="">
+        </li>
+        <li>
+            <img width="200px" src="https://images.pexels.com/photos/33597/guitar-classical-guitar-acoustic-guitar-electric-guitar.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="guitar" alt="">
+        </li>
+        <li>
+            <img width="200px" src="https://images.pexels.com/photos/934067/pexels-photo-934067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="sheet" alt="">
+        </li>
+        <li>
+            <a href="https://www.google.com/" id="google" style="color: aliceblue;">Google</a>
+        </li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('guitar').onclick=function(){
+    //     alert('Guitar clicked')
+    // } old
+
+    //attachEvent() used in internet explorer
+    // jQuery - on
+
+
+    //--------Events--to Study--------------
+    // type, timestamp, defaultPrevented, target, toElement, srcElement
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode 
+
+    //default=false(event bubbling)
+   
+    //-----------------------------------------------------------------------
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log('Clicked inside the ul');
+    // },false)
+    
+    // document.getElementById('guitar').addEventListener('click',function(e){
+    //    console.log('Guitar clicked');
+    //    e.stopPropagation()
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('Google Clicked');
+        
+    // },false)
+     //----------------------------------------------------------------------
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        // console.log(e.target.parentNode); //parentNode - to get the whole parent; here it is 'li'
+        
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+            
+        }
+
+
+        
+        // removeIt.parentNode.removeChild(removeIt)
+    },false)
+   
+
+</script>
+</html>
